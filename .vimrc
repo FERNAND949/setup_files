@@ -96,9 +96,6 @@ let g:seiya_auto_enable=1
 let g:unite_split_rule = 'botright'
 let g:unite_force_overwrite_statusline = 0
 
-" grep 検索
-nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-
 " unite grep に ag(The Silver Searcher) を使う
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
