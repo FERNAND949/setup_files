@@ -96,6 +96,17 @@ let g:seiya_auto_enable=1
 let g:unite_split_rule = 'botright'
 let g:unite_force_overwrite_statusline = 0
 
+" grep 検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+
 let g:vimfiler_force_overwrite_statusline = 0
 
 
@@ -313,11 +324,16 @@ nnoremap :w :update
 
 
 " Uniteキーバインド
+" fがファイル
+" oがアウトライン
+" bがビルド
+" gがgrep
 nnoremap [unite] <Nop>
 nmap <Space>u [unite]
 nmap <silent>[unite]f <Esc>:Unite file<Enter>
 nmap <silent>[unite]o <ESC>:Unite -vertical -winwidth=40 outline<Return>
 nmap <silent>[unite]b <Esc>:Unite build<Enter>
+nmap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 
 nmap ZZ <Nop>
 nmap ZQ <Nop>
