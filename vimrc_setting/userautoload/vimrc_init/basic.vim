@@ -35,6 +35,7 @@ set confirm 			"保存されてないファイルがあるときvimを終了す�
 set autoread 			"他で書き換えたら自動で読みなおす
 
 
+set wildchar=<C-Z>		" コマンドラインでTABで保存できる
 set wildmenu 			"コマンドライン補完を拡張
 set nostartofline 		"移動コマンドを使用した時行頭に移動しない
 set mouse=a 			"マウスを有効化
