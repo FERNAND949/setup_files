@@ -12,11 +12,11 @@ set ruler 			"ルーラーを表示
 set showcmd 			"タイプ途中のコマンドを下に表示
 set showmode 			"現在のモードを表示
 set cmdheight=3 		"コマンドラインの高さ
-set completeopt=menuone 	" プレビュー非表示
+set completeopt=menuone 	"プレビュー非表示
 
 " カーソル移動関連の設定
 set backspace=indent,eol,start  "バックスペースを有効
-set scrolloff=8 		" 上下8行の視界を確保
+set scrolloff=8 		"上下8行の視界を確保
 
 " 検索/置換の設定
 set incsearch 			"インクリメンタルサーチ
@@ -33,7 +33,6 @@ set noswapfile 			"スワップファイルを作らない
 set confirm 			"保存されてないファイルがあるときvimを終了すると保存の確認を行う
 set autoread 			"他で書き換えたら自動で読みなおす
 
-set wildchar=<C-Z>		" コマンドラインでTABで保存できる
 set wildmenu 			"コマンドライン補完を拡張
 set nostartofline 		"移動コマンドを使用した時行頭に移動しない
 set mouse=a 			"マウスを有効化

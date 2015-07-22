@@ -1,4 +1,5 @@
 
+
 " プログラム実行
 autocmd BufNew,BufRead *.cpp map <Space>o <Esc> :QuickRun ./out <Return>
 autocmd BufNew,BufRead *.py  map <Space>o <Esc> :!python % <Return>
@@ -46,7 +47,6 @@ nnoremap <Esc><Esc> :noh<CR>
 
 nnoremap :w :update
 
-
 " Uniteキーバインド
 " fがファイル
 " oがアウトライン
@@ -58,6 +58,7 @@ nmap <silent>[unite]f <Esc>:Unite file<Enter>
 nmap <silent>[unite]o <ESC>:Unite -vertical -winwidth=40 outline<Return>
 nmap <silent>[unite]b <Esc>:Unite build<Enter>
 nmap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nmap <silent>[unite]cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 
 nmap ZZ <Nop>
 nmap ZQ <Nop>
@@ -66,3 +67,10 @@ nmap ZQ <Nop>
 " インデント
 vnoremap <silent> > >gv
 vnoremap <silent> < <gv
+
+
+
+
+
+
+
