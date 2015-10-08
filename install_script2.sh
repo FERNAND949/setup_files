@@ -23,6 +23,7 @@ sudo aptitude install -y fonts-inconsolata
 sudo aptitude install -y clang-format-3.4
 sudo aptitude install -y libclang-3.3-dev
 sudo aptitude install -y libclang-3.4-dev
+sudo aptitude install -y ssh
 
 
 mkdir -p .vim/bundle
