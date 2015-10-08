@@ -12,7 +12,11 @@ endif
 "日本語
 NeoBundle 'vim-jp/vimdoc-ja'
 
+"シングルクオートとダブルクオートの入れ替え
+"cs現在のクオート変換後のクオート
+"例) cs"' ダブルクオートからシングルクオートへの変換
 NeoBundle 'surround.vim'
+
 "プラグイン管理
 "テーマ
 "カラースキーム
@@ -23,6 +27,7 @@ NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'miyakogi/seiya.vim' "半透明じゃないカラースキームを半透明にする
 NeoBundle 'osyo-manga/vim-over' "置換ハイライトとプレビュー
+
 NeoBundle 'Shougo/vimproc',{
 			\ 'build': {
 			\ 'windows': 'make -f make_mingw32.mak',
@@ -66,3 +71,10 @@ NeoBundle 'itchyny/lightline.vim'
 
 
 call neobundle#end()
+
+
+
+
+
+
+

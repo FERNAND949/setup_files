@@ -16,11 +16,12 @@ set completeopt=menuone 	"プレビュー非表示
 
 " カーソル移動関連の設定
 set backspace=indent,eol,start  "バックスペースを有効
-set scrolloff=8 		"上下8行の視界を確保
+set scrolloff=4		"上下8行の視界を確保
 
 " 検索/置換の設定
 set incsearch 			"インクリメンタルサーチ
 set hlsearch 			"ハイライト
+set ic 				"検索の時に大文字と小文字を区別しない
 
 " タブ/インデントの設定
 set smartindent 		"いい感じでインデントをしてくれる
