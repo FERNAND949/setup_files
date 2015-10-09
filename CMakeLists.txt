@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 #プロジェクトの指定
-PROJECT()
+PROJECT(server)
 
 #find glut
 find_package(GLUT REQUIRED glut)
@@ -25,11 +25,13 @@ if(NOT OPENGL_FOUND)
 endif(NOT OPENGL_FOUND)
 
 #Eigen
-SET( EIGEN3_INCLUDE_DIR "${EIGEN3_INCLUDE_DIR}" )
+set ( CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/modules/  )
+find_package(Eigen3 REQUIRED)
+INCLUDE_DIRECTORIES (${EIGEN3_INCLUDE_DIR})
 IF( NOT EIGEN3_INCLUDE_DIR )
 	MESSAGE( FATAL_ERROR "not Eigen.")
 ENDIF()
-INCLUDE_DIRECTORIES ( "${EIGEN3_INCLUDE_DIR}" )
+add_definitions(${EIGEN3_DEFINITIONS})
 
 
 #c++11が入ってるかどうか
@@ -46,7 +48,7 @@ endif()
 
 
 #実行ファイルの出力
-add_executable(out main.cpp)
+add_executable(out server.cpp)
 
 #コンパイルオプション
 #CXXはC++
@@ -57,7 +59,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -ftest-coverage -fprofile-arcs")
 
 #ライブラリのリンク
 target_link_libraries(out ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} m)
-
 
 
 
