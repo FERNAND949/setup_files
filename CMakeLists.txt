@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 #プロジェクトの指定
-PROJECT(server)
+PROJECT()
 
 #find glut
 find_package(GLUT REQUIRED glut)
@@ -48,12 +48,14 @@ endif()
 
 
 #実行ファイルの出力
-add_executable(out server.cpp)
+add_executable(out )
 
 #コンパイルオプション
 #CXXはC++
-#-gはデバッグをオン
+#-gはデバッグフラグをオン
+#-o0は最適化off
 #-Wallは警告オプション
+#-ftest-coverage -fprofile-arcs はgcovのオプション
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -ftest-coverage -fprofile-arcs")
 
 
